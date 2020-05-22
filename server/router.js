@@ -7,6 +7,8 @@ const sqlite3 = require('sqlite3').verbose();
 // const vote = require('./db_function/vote.js');
 // const user = require('./db_function/user.js');
 const user = require('./db_functions/user.js');
+const post = require('./db_functions/post.js');
+const challenge = require('./db_functions/challenge.js');
 console.log();
 const db = new sqlite3.Database('./db/challenge');
 
@@ -33,6 +35,18 @@ router.get("/", (req, res) => {
 router.all("/users", (req, res) => {
     user.list(req, res);
 });
+
+
+router.all("/posts", (req, res) => {
+  post.list(req, res);
+});
+
+
+router.all("/challenges", (req, res) => {
+  challenge.list(req, res);
+});
+
+
 
 router.use((req, res) => {
     res.status(400);
