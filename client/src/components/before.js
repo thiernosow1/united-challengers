@@ -1,13 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
+//import '../assets/js/carousel';
 
 
 
 
 function Before() {
     return (
-      <div class="CSSgal">
+      <div class="CSSgal" id="CSSGale">
        <img class="logo" src="logo.svg"/>
      
       <s id="s1"></s> 
@@ -16,26 +17,23 @@ function Before() {
     
       <img class="img_fond_light" src="icon_da.svg"/>
       <img class="img_fond" src="icon_da.svg"/>
-      <div class="slider">
+      <div class="slider" id="slider">
    
-        <div>
-          
+        <div class="slide">
           <img class="illus" src="idea.svg"/>
           <h3>Laissez libre court à votre imagination</h3>
           <p class="description"> Avec DailyArt vous pouvez laisser libre court à votre imagination, votre seul limite, c'est vous !</p>
-         
         </div>
   
-        <div>
+        <div class="slide" >
           <img class="illus" src="achievement.svg"/>
           <h3>Challengez votre esprit créatif</h3>
           <p class="description"> Participez aux différents challenges créatif disponible chaque jours et réalisables dans un temps imparti.</p>
-         
         </div>
   
-        <div>
+        <div class="slide">
         <img class="illus" src="register.svg"/>
-        <h3>Il est temps de créer ! </h3>
+        <h3>Il est temps <br/> de créer ! </h3>
         <section class="opt_connexion">
          <h3 id="last">
           <Link to={'/register'} id="btn-signup">
@@ -51,9 +49,9 @@ function Before() {
       </div>
       
       <div class="bullets">
-        <a href="#s1">o</a>
-        <a href="#s2">o</a>
-        <a href="#s3">o</a>
+        <a href="#s1">&bull;</a>
+        <a href="#s2">&bull;</a>
+        <a href="#s3">&bull;</a>
       </div>
     
     </div>
