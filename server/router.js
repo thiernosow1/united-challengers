@@ -31,33 +31,45 @@ router.get("/", (req, res) => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
+// USER //
 router.all("/users", (req, res) => {
-    user.list(req, res);
+    user.listUsers(req, res);
 });
 
-
-router.all("/posts", (req, res) => {
-  post.list(req, res);
-});
-
-
-router.all("/challenges", (req, res) => {
-  challenge.list(req, res);
-});
-
-
-
-router.use((req, res) => {
-    res.status(400);
-    res.json({
-    error: "Bad request"
-    });
-});
 
 // get user info //
 router.get('/user/:id', (req, res) => {
     user.profile(req, res);
   });
+
+  // add user
+  router.post('/user', (req, res) => {
+    user.addUser(req, res); 
+  });
+
+  //POSTS //
+
+  // get all posts
+  router.all("/posts", (req, res) => {
+    post.listPosts(req, res);
+  });
+
+  // get a user posts
+  router.get('user/post/:user_id', (req,res)=>{
+    post.userPosts(req,res);
+  });
+  
+  //get all challenges
+  
+  router.all("/challenges", (req, res) => {
+    challenge.listChallenges(req, res);
+  });
+
+  router.use((req, res) => {
+    res.status(400);
+    res.json({
+    error: "Bad request"
+    });
+});
 
 module.exports = router;

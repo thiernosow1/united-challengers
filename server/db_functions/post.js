@@ -5,10 +5,19 @@ const sqlite3 = require('sqlite3').verbose();
 
 const db = new sqlite3.Database('./db/challenge');
 
-function list(req, res){
+// get all posts
+function listPosts(req, res){
     db.all( "SELECT * FROM posts", (err, rows) => {
       res.json(rows);
     });
   }
 
-  module.exports = {list};
+// get a user posts
+
+function userPosts(req, res){
+  db.all("SELECT * FROM posts WHERE user_id = ?", [req.params.user_id], (err, rows) => {
+    res.json(rows);
+  });
+}
+
+  module.exports = {listPosts, userPosts};

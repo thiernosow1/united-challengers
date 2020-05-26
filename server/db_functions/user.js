@@ -5,16 +5,27 @@ const sqlite3 = require('sqlite3').verbose();
 
 const db = new sqlite3.Database('./db/challenge');
 
-function list(req, res){
+
+// get all users
+function listUsers(req, res){
     db.all( "SELECT * FROM users", (err, rows) => {
       res.json(rows);
     });
   }
 
+  // get a user informations
   function profile(req, res) {
     db.get( "SELECT * FROM users WHERE id = ?", [req.params.id], (err, rows) => {
       res.json(rows);
     });
   }
 
-  module.exports = {list,profile};
+  //Add user
+
+  function addUser(req, res){
+    db.run( "INSERT INTO users (login, password, picture_url, remember) VALUES (?,?,?,NULL)", [req.body.login,req.body.password,req.body.picture_url]);
+  res.json('ok!');
+  }
+
+
+  module.exports = {listUsers,profile,addUser};
