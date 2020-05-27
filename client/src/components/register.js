@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import { render } from 'react-dom';
 
-function RegisterChoix(){
+export default class Register extends Component{
+    render(){
     return (
 
     <div>
@@ -14,8 +15,11 @@ function RegisterChoix(){
     </div>
     );
 }
+}
 
-function RegisterForm(){
+
+export class RegisterForm extends Component{
+    render(){
     return (
         <div>
        <p> page du register form </p>
@@ -23,5 +27,5 @@ function RegisterForm(){
     );
 
 }
+}
 
-export default RegisterChoix; 
