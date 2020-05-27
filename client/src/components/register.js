@@ -17,9 +17,10 @@ export default class Register extends Component{
     uiConfig = {
         SignInflow :'popup',
         SignInOptions : [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+ 
         ],
         callbacks :{
             signInSuccess: ()=> false
@@ -37,7 +38,13 @@ export default class Register extends Component{
     render(){
     return (
 
-    <div className='login'>
+    <div class="login_page">
+       <div class="intro">
+                <h2>Inscription</h2>
+                <p>Inscrivez vous et rejoignez la communauté Dailyart!</p>
+                </div>
+
+                <div class="block_connexion">
        {this.state.isSignedIn ? (
            <div>
                 <div> Inscription réussie </div>
@@ -54,7 +61,17 @@ export default class Register extends Component{
        />
     ) 
          }
-    </div>
+
+</div>
+<div>
+<p class="accroche">Déjà un compte ? <Link to={'/login'} id="login">
+  Connectez-vous!
+   </Link> </p>
+</div>
+</div>
+
+
+
     );
 }
 }

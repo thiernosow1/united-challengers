@@ -13,9 +13,10 @@ export default class Login extends Component{
     uiConfig = {
         SignInflow :'popup',
         SignInOptions : [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      
         ],
         callbacks :{
             signInSuccess: ()=> false
@@ -31,7 +32,13 @@ export default class Login extends Component{
     }
     render(){
         return(
-            <div className='login'>
+            
+            <div class="login_page">
+                <div class="intro">
+                <h2>Connexion</h2>
+                <p>Ravi de vous revoir! Connectez-vous et découvrez les derniers challenges</p>
+                </div>
+        <div class="block_connexion">
        {this.state.isSignedIn ? (
 
                 <Redirect to='/home'/>
@@ -42,8 +49,13 @@ export default class Login extends Component{
        uiConfig={this.uiConfig}
        firebaseAuth={firebase.auth()}
        />
+    
     ) 
          }
+         </div>
+         <p class="accroche">Pas encore de compte ? <Link to={'/register'} id="login">
+           Inscrivez-vous!
+            </Link> </p>
     </div>
         );
     }
