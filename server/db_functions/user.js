@@ -23,7 +23,7 @@ function listUsers(req, res){
   //Add user
 
   function addUser(req, res){
-    db.run( "INSERT INTO users (login, password, picture_url, remember) VALUES (?,?,?,NULL)", [req.body.login,req.body.password,req.body.picture_url]);
+    db.run( "INSERT INTO users (login, password, birth_date, picture_url, remember) VALUES (?,?,?,NULL)", [req.body.login,req.body.password,req.body.birth_date,req.body.picture_url]);
   res.json('ok!');
   }
 

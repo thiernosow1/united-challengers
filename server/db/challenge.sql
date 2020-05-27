@@ -10,6 +10,7 @@ CREATE TABLE users (
   id INTEGER NOT NULL PRIMARY KEY,
   login TEXT,
   password TEXT,
+  birth_date DATE,
   picture_url TEXT,
   remember INTEGER
 );
@@ -46,10 +47,10 @@ CREATE TABLE follows (
     id_followingUser INT
 );
 
-INSERT INTO users (login, password, picture_url, remember)
+INSERT INTO users (login, password, birth_date, picture_url, remember)
 VALUES
-    ("ADMIN", "ADMIN", "", 0),
-    ("Camille", "1234", "", 0);
+    ("ADMIN", "ADMIN", "01/01/2000", "", 0),
+    ("Camille", "1234", "02/02/2000", "", 0);
 
 INSERT INTO posts (user_id, challenge_id, picture_url, creation_date)
 VALUES
