@@ -1,0 +1,49 @@
+.defi{
+    background-image: url("/prod/landscape.jpg");
+    background-size: 85vw;
+    filter: drop-shadow(80%);
+    background-position: bottom;
+    height: 17vh;
+    width: 94vw;
+    border-radius: 0.5rem;
+    font-family: $font;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+
+    img{
+        z-index: -3;
+        width: 85vw;
+    }
+    h4{
+        margin: 0;
+        padding: 0.5rem 1rem;
+        color:$white;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        width: 35vh;
+        font-family: $font_bold;
+    }
+    p{
+        margin: 0;
+        color:$white;
+        font-size: 0.6rem;
+        padding: 0 1rem;
+    }
+
+    .time{
+        display: inline-flex;
+        margin-left: 1rem;
+        padding: 0.2rem 0.6rem;
+        background-color: $white;
+        border-radius: 0.2rem;
+        margin-top: 0.5rem;
+    
+    img{
+        width: 3vw;
+    }
+    p{
+        color: $black;
+    }
+    }
+
+}

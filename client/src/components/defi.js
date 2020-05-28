@@ -7,8 +7,11 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 
 export default class Defi extends Component{
-    state={isSignedIn:true}
+  
+       state={isSignedIn:true}
     
+     
+       
     render(){
     return (
 
@@ -21,13 +24,25 @@ export default class Defi extends Component{
        <h2>Défis</h2>
        </div>
 
+<div class="main_page" >
+       <div class="defi" >
+              <h4>Let's draw a landscape</h4>
+              <p>Drawing challenge - May 2020</p>
+              <div class="time"><img src="/prod/clock.svg"/><p>72H</p></div>
+       </div>
 
+       <div class="defi">
+              <h4>Let's draw a unicorn</h4>
+              <p>Drawing challenge - June 2020</p>
+              <div class="time"><img src="/prod/clock.svg"/><p>72H</p></div>
+       </div>
+</div>
 
             <nav class="nav_menu">
             <Link to='/home'><div class="img1"></div></Link>
             <Link to='/post'><div class="img2"></div></Link>
             <Link to='/subscription'><div class="img3"></div></Link>
-            <Link to='/defi'><div class="img4"></div></Link>
+            <Link to='/defi'><div class="img4_b"></div></Link>
              </nav>
 
        </div>

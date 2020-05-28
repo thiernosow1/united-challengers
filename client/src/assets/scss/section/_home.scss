@@ -24,40 +24,45 @@ align-items: center;
     .img1{
         background-image: url("/nav/home.svg");
         background-size: 7vw;
+    }
 
-        &:hover{
-            background-image: url("/nav/home_full.svg");
-        }
-        
+   .img1_b{
+        background-image: url("/nav/home_full.svg");
+        background-size: 7vw;
     }
 
     .img2{
         background-image: url("/nav/plus.svg");
         background-size: 7vw;
+    }
 
-        &:hover{
-            background-image: url("/nav/plus_full.svg");
-        }
+    .img2_b{
+        background-image: url("/nav/plus_full.svg");
+        background-size: 7vw;
     }
 
     .img3{
         background-image: url("/nav/subscriptions.svg");
         background-size: 7vw;
         background-repeat: no-repeat;
-        &:hover{
-            background-image: url("/nav/subscriptions_full.svg");
-        }
+    
+    }
+
+    .img3_b{
+        background-image: url("/nav/subscriptions_full.svg");
+        background-size: 7vw;
+        background-repeat: no-repeat;
     
     }
 
     .img4{
         background-image: url("/nav/defi.svg");
         background-size: 7vw;
+    }
 
-        &:hover{
-            background-image: url("/nav/achievement_full.svg");
-        }
-
+    .img4_b{
+        background-image: url("/nav/achievement_full.svg");
+        background-size: 7vw;
     }
 }
 
