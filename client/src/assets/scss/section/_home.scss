@@ -1,0 +1,41 @@
+.home{
+height: 100vh;
+.nav_menu{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100vw;
+    height: 5vh;
+
+    div{
+        height: 10vw;
+        width: 10vw;
+    }
+    .img1{
+        background-image: url("/nav/home.svg");
+        background-size: 10vw;
+        
+    }
+
+    .img2{
+        background-image: url("/nav/plus.svg");
+        background-size: 10vw;
+    }
+
+    .img3{
+        background-image: url("/nav/subscriptions.svg");
+        background-size: 10vw;
+        background-repeat: no-repeat;
+    }
+
+    .img4{
+        background-image: url("/nav/defi.svg");
+        background-size: 10vw;
+
+    }
+}
+
+}

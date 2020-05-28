@@ -1,10 +1,10 @@
 @import "variables/_colors.scss";
-@import "variables/font";
+@import "variables/_font.scss";
 
 @import "base/_general.scss";
 
 @import "section/home";
-@import "section/login";
+@import "section/_form";
 
 @import "elements/slide.scss";
 

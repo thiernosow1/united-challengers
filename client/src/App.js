@@ -5,6 +5,9 @@ import Before from './components/before';
 import Login from './components/login';
 import RegisterChoix, {RegisterForm} from './components/register';
 import Home from './components/home';
+import Defi from './components/defi';
+import Post from './components/post';
+import Subscription from './components/subscription';
 
 
 function App(){
@@ -15,6 +18,9 @@ return(
   <Route exact={true} path="/login" component={Login} />
   <Route exact={true} path="/register" component={RegisterChoix} />
   <Route exact={true} path="/home" component={Home} />
+  <Route exact={true} path="/defi" component={Defi} />
+  <Route exact={true} path="/post" component={Post} />
+  <Route exact={true} path="/subscription" component={Subscription} />
   </Switch>
   </BrowserRouter>
 

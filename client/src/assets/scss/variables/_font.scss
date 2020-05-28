@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("../font/gilroy/Gilroy-Regular.ttf") format("ttf");
+   }
+
+
+   @font-face {
+    font-family: "Gilroy Bold";
+    src: url("../font/gilroy/Gilroy-Bold.ttf") format("ttf");
+   }
+
+
+   @font-face {
+    font-family: "Gilroy SemiBold";
+    src: url("../font/gilroy/Gilroy-Semibold.otf") format("otf");
+   }
+
+
+$gilroy:"Gilroy", sans-serif;
+$gilroy_bold:"Gilroy Bold", sans-serif;
+$gilroy_semibold:"Gilroy Semi Bold", sans-serif;
+
+$font:$gilroy;
+$font_bold:$gilroy_bold;
+$font_semibold:$gilroy_semibold;

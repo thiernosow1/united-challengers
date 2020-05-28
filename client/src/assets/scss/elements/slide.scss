@@ -131,7 +131,7 @@ http://stackoverflow.com/a/34696029/383904
         
     h3{
        line-height: 1.5rem;
-        font-weight: 700;
+        font-family: $font_bold;
         font-size: 1.3rem;
         color:$black;
         width: 70vw;
@@ -167,7 +167,7 @@ http://stackoverflow.com/a/34696029/383904
    }
     .description{
         font-size: 0.8rem;
-        font-weight: 400;
+        font-family: $font;
         line-height: 1rem;
         width: 80vw;    
         margin: 0 AUTO;
@@ -177,7 +177,7 @@ http://stackoverflow.com/a/34696029/383904
         #login{
             color:$lightblue;
             text-decoration-line: none;
-            font-weight: 600;
+            font-family: $font_semibold;
         }
         }
 

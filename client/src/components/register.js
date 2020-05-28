@@ -14,6 +14,7 @@ firebase.initializeApp({
 export default class Register extends Component{
     state={isSignedIn:false}
 
+    
     uiConfig = {
         SignInflow :'popup',
         SignInOptions : [
@@ -34,8 +35,8 @@ export default class Register extends Component{
             this.setState({isSignedIn: !! user})
         })
     }
-
-    render(){
+   
+      render(){
     return (
 
     <div class="login_page">
@@ -46,12 +47,14 @@ export default class Register extends Component{
 
                 <div class="block_connexion">
        {this.state.isSignedIn ? (
-           <div>
-                <div> Inscription réussie </div>
-                <button onClick={()=> firebase.auth().signOut()}>Sign Out</button>
-                <h1>Bienvenue {firebase.auth().currentUser.displayName}</h1>
+           <div class="post_register">
+                <h3> Inscription réussie !</h3>
+                <div class="bloc_infos">
+                {/* <button onClick={()=> firebase.auth().signOut()}>Sign Out</button> */}
+                <h1>Bienvenue, {firebase.auth().currentUser.displayName}</h1>
                 <img alt='profil picture' src={firebase.auth().currentUser.photoURL}/>
-                <Link to={'/home'} >Continuer</Link>
+                <Link to={'/home'} class="arrow" >continuer</Link>
+                </div>
            </div>
        ) : (
        <StyledFirebaseAuth
