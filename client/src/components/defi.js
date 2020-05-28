@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 
 
@@ -17,7 +16,7 @@ export default class Defi extends Component{
 
        <div class='home'>
               <div class="header">
-              <img alt='profil picture' class="avatar" src="/logout/avatar.svg"/>
+              <Link to='/profil'>  <img alt='profil picture' class="avatar" src="/logout/avatar.svg"/> </Link>
               <Link to='/login'><button onClick={()=> firebase.auth().signOut()} class="logout"></button></Link>
               </div>
        <div class="en-tete">
@@ -28,7 +27,7 @@ export default class Defi extends Component{
        <div class="defi" >
               <h4>Let's draw a landscape</h4>
               <p>Drawing challenge - May 2020</p>
-              <div class="time"><img src="/prod/clock.svg"/><p>72H</p></div>
+              <div class="time"><img alt="clock" src="/prod/clock.svg"/><p>72H</p></div>
        </div>
 
        <div class="defi">

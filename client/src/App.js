@@ -8,6 +8,7 @@ import Home from './components/home';
 import Defi from './components/defi';
 import Post from './components/post';
 import Subscription from './components/subscription';
+import Profil from './components/profil';
 
 
 function App(){
@@ -21,6 +22,7 @@ return(
   <Route exact={true} path="/defi" component={Defi} />
   <Route exact={true} path="/post" component={Post} />
   <Route exact={true} path="/subscription" component={Subscription} />
+  <Route exact={true} path="/profil" component={Profil} />
   </Switch>
   </BrowserRouter>
 
