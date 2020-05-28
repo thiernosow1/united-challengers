@@ -66,11 +66,14 @@ export default class Register extends Component{
          }
 
 </div>
+
+
+{this.state.isSignedIn ? (
 <div>
-<p class="accroche">Déjà un compte ? <Link to={'/login'} id="login">
-  Connectez-vous!
-   </Link> </p>
 </div>
+):(<div><p class="accroche">Déjà un compte ? <Link to={'/login'} id="login">
+Connectez-vous!
+ </Link> </p></div>)}
 </div>
 
 

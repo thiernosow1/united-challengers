@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
     font-family: $font;
 
@@ -58,7 +58,7 @@
         #login{
             color:$lightblue;
             text-decoration-line: none;
-            font-weight: 600;
+            font-weight: 400;
         }
     }
   
@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
 
     h3{
@@ -86,7 +86,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 75vw;
+        width: 80vw;
         margin: 0 auto;
         height: 30vh;
     h1{

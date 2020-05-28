@@ -13,9 +13,10 @@ export default class Home extends Component{
     return (
 
         <div class='home'>
-               <div>
-                    <Link to='/login'><button onClick={()=> firebase.auth().signOut()}>Sign Out</button></Link>
-
+               <div class="header">
+                <img alt='profil picture' class="avatar" src="/logout/avatar.svg"/>
+                <Link to='/login'><button onClick={()=> firebase.auth().signOut()} class="logout"></button></Link>
+               </div>
                     <nav class="nav_menu">
                     <Link to='/home'><div class="img1"></div></Link>
                     <Link to='/post'><div class="img2"></div></Link>
@@ -24,11 +25,10 @@ export default class Home extends Component{
 
                      </nav>
 
-               </div>
+     </div>
         
        
 
-        </div>
         );
 
 }

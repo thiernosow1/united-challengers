@@ -13,8 +13,11 @@ export default class Subscription extends Component{
     return (
 
        <div class='home'>
-     
-            <Link to='/login'><button onClick={()=> firebase.auth().signOut()}>Sign Out</button></Link>
+     <div class="header">
+              <img alt='profil picture' class="avatar" src="/logout/avatar.svg"/>
+            <Link to='/login'><button onClick={()=> firebase.auth().signOut()} class="logout"></button></Link>
+
+               </div>
 <p>Page "abonnement"</p>
             <nav class="nav_menu">
             <Link to='/home'><div class="img1"></div></Link>
