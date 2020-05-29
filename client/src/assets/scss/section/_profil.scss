@@ -2,7 +2,7 @@
     position: absolute;
     left: 0;
     background-color: #F1F2F6;
-    width: 110vw;
+    width: 100vw;
     height: 100vh;
     z-index: -5;
 }
@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 110vw;
+    width: 100vw;
     margin: 0 auto;
     height: 18vh;
     left:0;
@@ -178,7 +178,7 @@ ul{
 position: absolute;
 top:1rem;
 
-
+.profil{
 .bloc_profil{
     position: fixed;
     display: flex;
@@ -186,7 +186,7 @@ top:1rem;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 110vw;
+    width: 100vw;
     margin: 0 auto;
     height: 15vh;
     top:5vh;
@@ -252,5 +252,5 @@ ul{
             
             }
 }
-
+}
 }

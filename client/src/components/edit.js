@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
-import Jump from 'jump.js';
-import {menu} from "../assets/js/dev/classes/menu";
+// import Jump from 'jump.js';
+// import {menu} from "../assets/js/dev/classes/menu";
 
 
 export default class Edit extends Component{
@@ -32,12 +32,29 @@ export default class Edit extends Component{
     <div class="edit_profil">
  <h2>Editer le Profil</h2>
 
-
     <div class="bloc_profil">
         <img alt='profil picture' src={firebase.auth().currentUser.photoURL}/>
-        <h4>{firebase.auth().currentUser.displayName}</h4>
+    <div>
+        <h4>{firebase.auth().currentUser.displayName}</h4>  
+        <span class="id_user">@11_{firebase.auth().currentUser.displayMail}</span>
+        </div>
+      
     </div>
 
+    <form> 
+       <label>Id</label>
+       <input type="text" placeholder="id"></input>
+       <label>Nom</label>
+       <input  type="text" placeholder="nom"></input>
+       <label>Prénom</label>
+       <input  type="text" placeholder="prénom"></input>
+       <label>Mail</label>
+       <input  type="text" placeholder="mail"></input>
+       <label>Numéro</label>
+       <input  type="text" placeholder="0638978765"></input>
+       <label>Date de Naissance</label>
+       <input  type="text" placeholder="30/01/2000"></input>
+   </form>
   </div>
    
 ):(

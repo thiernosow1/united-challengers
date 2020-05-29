@@ -2,12 +2,45 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
-
+import firebaseConfig from "../firebase/config"
+import  {db,auth,storage} from "../firebase/config";
 
 
 export default class Defi extends Component{
   
-       state={isSignedIn:true}
+       state={
+              isSignedIn:true,
+              challenges : null
+          }
+          
+          componentDidMount(){
+              db.collection('challenges').get().then(snapshot =>{
+                  const challenges =[]
+                  snapshot.docs.forEach((doc) => {
+                      
+                      const id = doc.id; 
+                      const data = doc.data();
+                      challenges.push(id,data)
+                  this.setState({ challenges : challenges})
+                      
+                  })
+                  
+              })
+              db.collection('posts').get().then(snapshot =>{
+                  const posts =[]
+                  snapshot.docs.forEach((doc) => {
+                      
+                      const id = doc.id; 
+                      const data = doc.data();
+                      posts.push(id,data)
+                  this.setState({ posts : posts})
+                      
+                  })
+                  
+              })
+      
+              .catch(error => console.log(error))
+          }
     
      
        
@@ -22,20 +55,30 @@ export default class Defi extends Component{
        <div class="en-tete">
        <h2>Défis</h2>
        </div>
+       {this.state.challenges && this.state.challenges.map( challenge =>{
+                    return(
+            
+              <div class="defi">
+              <h4>{challenge.describe}</h4>
+              <p>{challenge.type}</p>
+              <div class="time">
+                  <img alt="clock" src="/prod/clock.svg"/><p>{challenge.startday_hour}</p></div>
+             </div>
+                    
+                    )
+                })}
 
-<div class="main_page" >
-       <div class="defi" >
-              <h4>Let's draw a landscape</h4>
-              <p>Drawing challenge - May 2020</p>
-              <div class="time"><img alt="clock" src="/prod/clock.svg"/><p>72H</p></div>
-       </div>
+                {this.state.posts && this.state.posts.map( post =>{
+                    return(
+                        <div>
+                   
+                            <p>{Date(post.creation_date)}</p>
+                           
+                       
+                        </div>
 
-       <div class="defi">
-              <h4>Let's draw a unicorn</h4>
-              <p>Drawing challenge - June 2020</p>
-              <div class="time"><img src="/prod/clock.svg"/><p>72H</p></div>
-       </div>
-</div>
+                    )
+                })}
 
             <nav class="nav_menu">
             <Link to='/home'><div class="img1"></div></Link>
