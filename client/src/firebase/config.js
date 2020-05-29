@@ -1,5 +1,5 @@
 // <!-- The core Firebase JS SDK is always required and must be listed first -->
-import * as firebase from 'firebase'
+import * as firebase from 'firebase/app'
 
 // // <!-- TODO: Add SDKs for Firebase products that you want to use
 //      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -20,4 +20,11 @@ import "firebase/storage";
     appId: "1:154489471985:web:811fb5dcd4bd26fa66ba50",
     measurementId: "G-PPS11THN92"
   };
-  export default firebaseConfig;
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  export const storage =firebase.storage()
+  export const auth = firebase.auth()
+
+  export const db = firebase.firestore()
+  export default firebase;

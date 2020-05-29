@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import { render } from 'react-dom';
-import firebase from 'firebase';
+import * as firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebaseConfig from '../firebase/config'
 
-firebase.initializeApp({
-    apiKey : 'AIzaSyBXQP5YAz5Ky7Rr4rCKLYd17LRJPDcWU0Q' ,
-    authDomain : 'daily-art-auth.firebaseapp.com'
-
-})
 
 export default class Register extends Component{
     state={isSignedIn:false}
