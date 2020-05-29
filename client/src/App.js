@@ -9,6 +9,7 @@ import Defi from './components/defi';
 import Post from './components/post';
 import Subscription from './components/subscription';
 import Profil from './components/profil';
+import Edit from './components/edit';
 
 
 function App(){
@@ -23,6 +24,7 @@ return(
   <Route exact={true} path="/post" component={Post} />
   <Route exact={true} path="/subscription" component={Subscription} />
   <Route exact={true} path="/profil" component={Profil} />
+  <Route exact={true} path="/edit" component={Edit} />
   </Switch>
   </BrowserRouter>
 

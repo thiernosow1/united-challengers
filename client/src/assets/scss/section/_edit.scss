@@ -1,0 +1,37 @@
+.edit_profil{
+    position: absolute;
+    left: 0;
+    background-color: #F1F2F6;
+    width: 110vw;
+    height: 100vh;
+    z-index: -5;
+
+
+.bloc_profil{
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 110vw;
+    margin: 0 auto;
+    left:0;
+    overflow-y: hidden;
+
+
+    h4{
+    font-size: 1rem;
+    font-family: $font_bold; 
+    margin:0 1rem;
+    width: 70vh;
+    white-space: nowrap;
+}
+img{
+    width:20vw;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+}
+}

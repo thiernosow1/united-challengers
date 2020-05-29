@@ -1,18 +1,256 @@
+.profil{
+    position: absolute;
+    left: 0;
+    background-color: #F1F2F6;
+    width: 110vw;
+    height: 100vh;
+    z-index: -5;
+}
+
 .bloc_profil{
     display: flex;
+    position: fixed;
+    z-index: 5;
     flex-direction: row;
     justify-content: space-around;
-
     align-items: center;
-    width: 80vw;
+    width: 110vw;
     margin: 0 auto;
-    height: 10vh;
-h4{
+    height: 18vh;
+    left:0;
+    background-color: $white;
+    overflow-y: hidden;
+
+
+    h4{
     font-size: 1.5rem;
-    font-family: $font_semibold; 
+    font-family: $font_bold; 
+    margin:0 1rem;
+    width: 70vh;
+    white-space: nowrap;
 }
 img{
-    width:20vw;
+    width:25vw;
     border-radius: 50%;
+    margin-left: 2rem;
 }
+
+}
+
+
+.statistic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vw;
+    height: 8vh;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    position: fixed;
+    background-color: $white;
+    z-index: 5;
+    width: 100vw;
+    left:0;
+    top:23vh;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 10vw;
+        h5{
+            margin: 0;
+            line-height: 0;
+            font-size: 1rem;
+        }
+        p{
+            font-size: 0.6rem;
+            font-weight: normal;
+            font-family: $font;
+        }
+    }
+}
+
+
+ul{
+    position: fixed;
+    z-index: 5;
+    display: inline-flex;
+    width: 100vw;
+    height: 5vh;
+    color: #F1F2F6;
+    top:27.5vh;
+    background-color: #F1F2F6;
+   
+    li{
+        list-style-type: none;
+        padding-top: 0.5rem;
+        width: 25vw;
+        font-size: 0.7rem;
+        color:$grey;
+
+        &:hover{
+            color:$black;
+        }
+    }
+}
+
+.publications_on_profil{
+    position: absolute;
+    left: 0;
+    top: 28vh;
+    width: 100vw;
+    padding-bottom: 6vh;
+    background-color: #F1F2F6;
+
+   
+
+.post{
+    max-width: 88vw;
+    max-height: 50vh;
+    padding-bottom: 2vh;
+    background-color: $white;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    margin-top: 2vh;
+    
+    .infos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 1rem;
+        width: 100vw;
+        height: 5vh;
+ 
+       
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 10vh;
+            margin: 0 0.5rem;
+            margin-top: 2rem;
+                h4{
+                    margin: 0;
+                    line-height: 0;
+                    font-size: 0.8rem;
+                }
+                p{
+                    font-size: 0.5rem;
+                color: $grey;
+            }
+         }
+        img{
+            margin-top: 1rem;
+        width:10vw;
+        border-radius: 50%;
+    }
+}
+
+    .container_img{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        height: 80%;
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        object-fit: cover;
+        img{
+            width: 80vw;
+            object-fit: contain;
+            margin-top: 1rem;
+            border-radius: 0.3rem;
+        }
+    }
+
+
+}
+}
+
+
+.is-small-menu{
+
+position: absolute;
+top:1rem;
+
+
+.bloc_profil{
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 110vw;
+    margin: 0 auto;
+    height: 15vh;
+    top:5vh;
+    padding-top: 1vh;
+    left:0;
+    background-color: $white;
+
+
+    h4{
+    font-size: 1rem;
+    font-family: $font_bold; 
+    margin:0 1rem;
+    width: 70vh;
+    white-space: nowrap;
+}
+img{
+    width:5vw;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+}
+
+.statistic{
+    display: none;
+}
+
+ul{
+    top:13vh;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    top:0rem;
+    height: 10vh;
+    padding: 0 5vw;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    background-color: $white;
+
+    button{
+        width: 5vw;
+        height: 5vw;
+        border:none;
+        background-color: $white;
+        background-image: url("/logout/logout.svg");
+            background-size: 5vw;
+            background-repeat: no-repeat;
+            margin-top: 0.2rem;
+        
+        }
+        .avatar{
+            width: 6vw;
+            height: 6vw;
+            background-color: $white;
+            background-image: url("/logout/avatar.svg");
+                background-size: 6vw;
+                background-repeat: no-repeat;
+            
+            }
+}
+
 }

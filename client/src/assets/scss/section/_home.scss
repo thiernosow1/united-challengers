@@ -11,9 +11,9 @@ align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     width: 100vw;
-    height: 4vh;
+    height: 5vh;
 
     background-color: $white;
 
@@ -71,9 +71,12 @@ align-items: center;
     display: flex;
     flex-direction: row;
     width: 90vw;
+    top:0;
     height: 5vh;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
+    background-color: $white;
 
     button{
         width: 5vw;
