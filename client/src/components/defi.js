@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
-import firebaseConfig from "../firebase/config"
+import firebaseConfig from "../firebase/config";
 import  {db,auth,storage} from "../firebase/config";
+import {Color} from '../assets/js/dev/classes/color'; 
 
 
 export default class Defi extends Component{
-  
+   
        state={
               isSignedIn:true,
               challenges : null
@@ -42,6 +43,7 @@ export default class Defi extends Component{
               .catch(error => console.log(error))
           }
     
+          
      
        
     render(){
@@ -58,7 +60,7 @@ export default class Defi extends Component{
        {this.state.challenges && this.state.challenges.map( challenge =>{
                     return(
             
-              <div class="defi">
+              <div class="defi" >
               <h4>{challenge.describe}</h4>
               <p>{challenge.type}</p>
               <div class="time">
