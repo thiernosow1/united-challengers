@@ -2,16 +2,50 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
+import  {db,auth,storage} from "../firebase/config";
 
 
 
 export default class Defi extends Component{
   
-       state={isSignedIn:true}
+       state={
+              isSignedIn:true,
+              challenges : null
+          }
+          
+          componentDidMount(){
+              db.collection('challenges').get().then(snapshot =>{
+                  const challenges =[]
+                  snapshot.docs.forEach((doc) => {
+                      
+                      const id = doc.id; 
+                      const data = doc.data();
+                      challenges.push(id,data)
+                  this.setState({ challenges : challenges})
+                      
+                  })
+                  
+              })
+
+      
+              .catch(error => console.log(error))
+          }
     
      
        
     render(){
+       const displayChallenge = this.state.challenges && this.state.challenges.map( challenge =>{
+              return(
+                  <div className='defi'>
+                      <h4>{challenge.type}</h4>
+                      <p>{challenge.describe} - {challenge.startday_hour}</p>
+                      <div class="time"><img alt="clock" src="/prod/clock.svg"/><p>24H</p></div>
+                      
+                 
+                  </div>
+
+              )
+          })
     return (
 
        <div class='home'>
@@ -24,17 +58,10 @@ export default class Defi extends Component{
        </div>
 
 <div class="main_page" >
-       <div class="defi" >
-              <h4>Let's draw a landscape</h4>
-              <p>Drawing challenge - May 2020</p>
-              <div class="time"><img alt="clock" src="/prod/clock.svg"/><p>72H</p></div>
-       </div>
+       
+       {displayChallenge}
 
-       <div class="defi">
-              <h4>Let's draw a unicorn</h4>
-              <p>Drawing challenge - June 2020</p>
-              <div class="time"><img src="/prod/clock.svg"/><p>72H</p></div>
-       </div>
+       
 </div>
 
             <nav class="nav_menu">
