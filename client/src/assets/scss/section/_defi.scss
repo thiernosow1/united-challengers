@@ -1,19 +1,14 @@
+
+
 .defi{
-    background-image: url("/prod/landscape.jpg");
-    background-size: 85vw;
-    filter: drop-shadow(80%);
-    background-position: bottom;
     height: 17vh;
     width: 94vw;
     border-radius: 0.5rem;
     font-family: $font;
     margin-bottom: 1.5rem;
     overflow: hidden;
+    background-color: $lightblue;
 
-    img{
-        z-index: -3;
-        width: 85vw;
-    }
     h4{
         margin: 0;
         padding: 0.5rem 1rem;

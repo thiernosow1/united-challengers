@@ -15,34 +15,34 @@ export default class Home extends Component{
         challenges : null
     }
     
-    componentDidMount(){
-        db.collection('challenges').get().then(snapshot =>{
-            const challenges =[]
-            snapshot.docs.forEach((doc) => {
+    // componentDidMount(){
+    //     db.collection('challenges').get().then(snapshot =>{
+    //         const challenges =[]
+    //         snapshot.docs.forEach((doc) => {
                 
-                const id = doc.id; 
-                const data = doc.data();
-                challenges.push(id,data)
-            this.setState({ challenges : challenges})
+    //             const id = doc.id; 
+    //             const data = doc.data();
+    //             challenges.push(id,data)
+    //         this.setState({ challenges : challenges})
                 
-            })
+    //         })
             
-        })
-        db.collection('posts').get().then(snapshot =>{
-            const posts =[]
-            snapshot.docs.forEach((doc) => {
+    //     })
+    //     db.collection('posts').get().then(snapshot =>{
+    //         const posts =[]
+    //         snapshot.docs.forEach((doc) => {
                 
-                const id = doc.id; 
-                const data = doc.data();
-                posts.push(id,data)
-            this.setState({ posts : posts})
+    //             const id = doc.id; 
+    //             const data = doc.data();
+    //             posts.push(id,data)
+    //         this.setState({ posts : posts})
                 
-            })
+    //         })
             
-        })
+    //     })
 
-        .catch(error => console.log(error))
-    }
+    //     .catch(error => console.log(error))
+    //}
     render(){
     
     return (
@@ -57,28 +57,31 @@ export default class Home extends Component{
                     <h2>Découvrir</h2>
                 </div>
 
-                {this.state.challenges && this.state.challenges.map( challenge =>{
+                {/* {this.state.challenges && this.state.challenges.map( challenge =>{
                     return(
-                        <div>
-                            <p>{challenge.type}</p>
-                            <p>{challenge.describe}</p>
-                            <p>{challenge.startday_hour}</p>
-                       
-                        </div>
-
+            
+              <div class="defi" >
+              <h4>{challenge.describe}</h4>
+              <p>{challenge.type}</p>
+              <div class="time">
+                  <img alt="clock" src="/prod/clock.svg"/><p>{challenge.startday_hour}</p></div>
+             </div>
+                    
                     )
                 })}
 
                 {this.state.posts && this.state.posts.map( post =>{
                     return(
                         <div>
+                   
                             <p>{Date(post.creation_date)}</p>
                            
                        
                         </div>
 
                     )
-                })}
+                })*/}
+                
 
                
                     <nav class="nav_menu">

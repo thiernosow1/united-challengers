@@ -26,11 +26,11 @@ export default class Defi extends Component{
                   })
                   
               })
-
       
               .catch(error => console.log(error))
           }
     
+          
      
        
     render(){
@@ -56,6 +56,18 @@ export default class Defi extends Component{
        <div class="en-tete">
        <h2>Défis</h2>
        </div>
+       {this.state.challenges && this.state.challenges.map( challenge =>{
+                    return(
+            
+              <div class="defi" >
+              <h4>{challenge.describe}</h4>
+              <p>{challenge.type}</p>
+              <div class="time">
+                  <img alt="clock" src="/prod/clock.svg"/><p>{challenge.startday_hour}</p></div>
+             </div>
+                    
+                    )
+                })}
 
 <div class="main_page" >
        
