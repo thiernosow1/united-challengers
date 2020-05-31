@@ -56,6 +56,8 @@ export default class Defi extends Component{
        <div class="en-tete">
        <h2>Défis</h2>
        </div>
+
+<div class="main-page">
        {this.state.challenges && this.state.challenges.map( challenge =>{
                     return(
             
@@ -69,12 +71,10 @@ export default class Defi extends Component{
                     )
                 })}
 
-<div class="main_page" >
        
        {displayChallenge}
 
-       
-</div>
+             </div> 
 
             <nav class="nav_menu">
             <Link to='/home'><div class="img1"></div></Link>

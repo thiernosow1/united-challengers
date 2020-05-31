@@ -70,13 +70,14 @@ align-items: center;
     position: fixed;
     display: flex;
     flex-direction: row;
-    width: 90vw;
+    width: 100vw;
     top:0;
     height: 5vh;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
     background-color: $white;
+    padding: 0 2rem;
 
     button{
         width: 5vw;
@@ -114,4 +115,8 @@ align-items: center;
 }
 
 
+}
+
+.main-page{
+    padding-bottom: 1rem;
 }
