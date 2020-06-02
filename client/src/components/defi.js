@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import '../assets/css/app.css';
-import firebase from 'firebase';
-import  {db,auth,storage} from "../firebase/config";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "../assets/css/app.css";
+import firebase from "firebase";
+import { db, auth, storage } from "../firebase/config";
 import Color from "../assets/js/dev/classes/color";
 
 export default class Defi extends Component {
@@ -66,13 +66,11 @@ export default class Defi extends Component {
     return challenges.map((challenge) => {
       const time = -challenge.duration + (Date.now() - challenge.created_at);
       const date = new Date(time); // temps écoulé
-      console.log(time);
       return (
         <div className="defi" key={challenge.id}>
           <h4>{challenge.description}</h4>
           <p>
-            {challenge.type} -{" "}
-            {new Date(challenge.created_at).toLocaleString()}
+            {challenge.type} - {new Date(challenge.created_at).toLocaleString()}
           </p>
           <div class="time">
             <img alt="clock" src="/prod/clock.svg" />
@@ -89,7 +87,6 @@ export default class Defi extends Component {
     const elmt = post.likes.findIndex((like) =>
       like.isEqual(db.doc(`users/${userId}`))
     );
-    console.log(elmt);
     return elmt !== -1;
   }
 
@@ -97,7 +94,7 @@ export default class Defi extends Component {
   classement(posts) {
     return posts.map((post) => (
       <div className="displayPosts" key={post.id}>
-        <p>auteur: {post.author} </p>
+        <p>auteur: {post.author.login}</p>
         <img className="imageForm" src={post.picture_url} />
         <div className="likes">
           {this.isLiked(post) ? (
@@ -145,7 +142,8 @@ export default class Defi extends Component {
   }
 
   render() {
-    const { challenges } = this.state;
+    const { challenges, posts } = this.state;
+    console.log(posts);
     return (
       <div class="home">
         <div class="header">
@@ -165,7 +163,9 @@ export default class Defi extends Component {
         <div className="sousmenu">
           <a onClick={() => this.setState({ page: "dessin" })}>Dessin</a>
           <a onClick={() => this.setState({ page: "photo" })}>Photo</a>
-          <a onClick={() => this.setState({ page: "classement" })}>Classement</a>
+          <a onClick={() => this.setState({ page: "classement" })}>
+            Classement
+          </a>
         </div>
 
         <div class="main-page">{this.manageContent()}</div>
