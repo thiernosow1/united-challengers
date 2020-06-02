@@ -1,7 +1,7 @@
 .profil{
     position: absolute;
     left: 0;
-    background-color: #F1F2F6;
+    background-color: $lightgrey;
     width: 100vw;
     height: 100vh;
     z-index: -5;
@@ -79,9 +79,9 @@ ul{
     display: inline-flex;
     width: 100vw;
     height: 5vh;
-    color: #F1F2F6;
+    color: $lightgrey;
     top:27.5vh;
-    background-color: #F1F2F6;
+    background-color: $lightgrey;
    
     li{
         list-style-type: none;
