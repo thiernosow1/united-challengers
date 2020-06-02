@@ -14,36 +14,33 @@ export default class Home extends Component {
   };
 
   componentDidMount() {
-    let posts = [];
     db.collection("posts")
       .get()
       .then((snapshot) => {
+        let posts = [];
         snapshot.docs.forEach((doc) => {
           let post = doc.data();
           post.id = doc.ref.id;
-          if (post.author) {
-            post.author
+          console.log(post.author);
+          if (post.author && post.challenge_ref) {
+            db.doc(post.author.path)
               .get()
               .then((res) => {
                 post.author = res.data();
-                post.author.id = res.id;
+                post.author.id = res.ref.id;
+                db.doc(post.challenge_ref.path)
+                  .get()
+                  .then((res) => {
+                    post.challenge_ref = res.data();
+                    post.challenge_ref.id = res.id;
+                  });
               })
               .catch((error) => console.log(error));
+            posts.push(post);
           }
-          if (post.challenge_ref) {
-            post.challenge_ref
-              .get()
-              .then((res) => {
-                post.challenge_ref = res.data();
-                post.challenge_ref.id = res.id;
-              })
-              .catch((error) => console.log(error));
-          }
-          posts.push(post);
         });
-        //console.log(posts);
+        this.setState({ posts });
       })
-      .then(() => this.setState({ posts }))
       .catch((error) => console.log(error));
   }
 
@@ -55,10 +52,6 @@ export default class Home extends Component {
     );
     console.log(elmt);
     return elmt !== -1;
-  }
-
-  handleManageLike(liked) {
-    console.log(liked);
   }
 
   handleDislike = (e) => {
@@ -78,7 +71,6 @@ export default class Home extends Component {
         newPosts[idx].likes = newLikes;
         this.setState({ posts: newPosts }, () => console.log(this.state.posts));
       });
-    //this.handleManageLike(f);
   };
 
   handleLike = (e) => {
@@ -101,7 +93,7 @@ export default class Home extends Component {
   displayPosts(posts) {
     return posts.map((post) => (
       <div className="displayPosts" key={post.id}>
-        <p>auteur: {post.challenge_ref.id} </p>
+        <p>auteur: {post.author.login} </p>
         <img className="imageForm" src={post.picture_url} />
         <div className="likes">
           {this.isLiked(post) ? (
