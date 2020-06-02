@@ -4,7 +4,7 @@ import "../assets/css/app.css";
 import { render } from "react-dom";
 import * as firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { db } from "../firebase/config";
+import { db, auth } from "../firebase/config";
 
 export default class Register extends Component {
   state = { isSignedIn: false };
@@ -24,14 +24,17 @@ export default class Register extends Component {
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged((user) => {
       console.log(user);
-      this.setState({ isSignedIn: !!user }, () => {
-        db.collection("users").add({
-          login: user.displayName,
-          followed_by: [],
-          created_at: Date.now(),
-          id: user.uid,
+      if (user) {
+        this.setState({ isSignedIn: !!user }, () => {
+          db.collection("users")
+            .add({
+              login: user.displayName ?? "",
+              followed_by: [],
+              created_at: Date.now(),
+            })
+            .then((ref) => localStorage.setItem("userId", ref.id));
         });
-      });
+      }
     });
   };
 

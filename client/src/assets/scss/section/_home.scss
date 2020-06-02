@@ -1,11 +1,11 @@
-.home{
-height: 100vh;
-width: 100vw;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-.nav_menu{
+.home {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .nav_menu {
     position: fixed;
     bottom: 0;
     display: flex;
@@ -17,61 +17,59 @@ align-items: center;
 
     background-color: $white;
 
-    div{
-        height: 7vw;
-        width: 7vw;
+    div {
+      height: 7vw;
+      width: 7vw;
     }
-    .img1{
-        background-image: url("/nav/home.svg");
-        background-size: 7vw;
-    }
-
-   .img1_b{
-        background-image: url("/nav/home_full.svg");
-        background-size: 7vw;
+    .img1 {
+      background-image: url("/nav/home.svg");
+      background-size: 7vw;
     }
 
-    .img2{
-        background-image: url("/nav/plus.svg");
-        background-size: 7vw;
+    .img1_b {
+      background-image: url("/nav/home_full.svg");
+      background-size: 7vw;
     }
 
-    .img2_b{
-        background-image: url("/nav/plus_full.svg");
-        background-size: 7vw;
+    .img2 {
+      background-image: url("/nav/plus.svg");
+      background-size: 7vw;
     }
 
-    .img3{
-        background-image: url("/nav/subscriptions.svg");
-        background-size: 7vw;
-        background-repeat: no-repeat;
-    
+    .img2_b {
+      background-image: url("/nav/plus_full.svg");
+      background-size: 7vw;
     }
 
-    .img3_b{
-        background-image: url("/nav/subscriptions_full.svg");
-        background-size: 7vw;
-        background-repeat: no-repeat;
-    
+    .img3 {
+      background-image: url("/nav/subscriptions.svg");
+      background-size: 7vw;
+      background-repeat: no-repeat;
     }
 
-    .img4{
-        background-image: url("/nav/defi.svg");
-        background-size: 7vw;
+    .img3_b {
+      background-image: url("/nav/subscriptions_full.svg");
+      background-size: 7vw;
+      background-repeat: no-repeat;
     }
 
-    .img4_b{
-        background-image: url("/nav/achievement_full.svg");
-        background-size: 7vw;
+    .img4 {
+      background-image: url("/nav/defi.svg");
+      background-size: 7vw;
     }
-}
 
-.header{
+    .img4_b {
+      background-image: url("/nav/achievement_full.svg");
+      background-size: 7vw;
+    }
+  }
+
+  .header {
     position: fixed;
     display: flex;
     flex-direction: row;
     width: 100vw;
-    top:0;
+    top: 0;
     height: 5vh;
     align-items: center;
     justify-content: space-between;
@@ -79,44 +77,56 @@ align-items: center;
     background-color: $white;
     padding: 0 2rem;
 
-    button{
-        width: 5vw;
-        height: 5vw;
-        border:none;
-        background-color: $white;
-        background-image: url("/logout/logout.svg");
-            background-size: 5vw;
-            background-repeat: no-repeat;
-            margin-top: 0.2rem;
-        
-        }
-        .avatar{
-            width: 6vw;
-            height: 6vw;
-            background-color: $white;
-            background-image: url("/logout/avatar.svg");
-                background-size: 6vw;
-                background-repeat: no-repeat;
-            
-            }
-}
+    button {
+      width: 5vw;
+      height: 5vw;
+      border: none;
+      background-color: $white;
+      background-image: url("/logout/logout.svg");
+      background-size: 5vw;
+      background-repeat: no-repeat;
+      margin-top: 0.2rem;
+    }
+    .avatar {
+      width: 6vw;
+      height: 6vw;
+      background-color: $white;
+      background-image: url("/logout/avatar.svg");
+      background-size: 6vw;
+      background-repeat: no-repeat;
+    }
+  }
 
-
-.en-tete{
+  .en-tete {
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 90vw;
 
-    h2{
-        font-size: 2rem;
+    h2 {
+      font-size: 2rem;
     }
+  }
 }
 
-
+.main-page {
+  padding-bottom: 1rem;
 }
 
-.main-page{
-    padding-bottom: 1rem;
+.displayPosts {
+  width: 100%;
+  margin: auto;
+}
+
+.imageForm {
+  width: 360px;
+}
+
+.likes {
+  display: flex;
+}
+.imgLike {
+  width: 20px;
+  margin-right: 5px;
 }

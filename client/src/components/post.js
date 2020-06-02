@@ -31,9 +31,9 @@ export default class Post extends Component {
         .where("type", "==", this.state.type)
         .get();
       const cod = snapChall.docs[0]; // challenge of the day
-      console.log(cod.id);
+      console.log(localStorage.getItem("userId"));
       const postRef = await db.collection("posts").add({
-        author: db.doc(`users/${auth.currentUser.uid}`),
+        author: db.doc(`users/${localStorage.getItem("userId")}`),
         challenge_ref: db.doc(`challenges/${snapChall.docs[0].id}`),
         created_at: Date.now(),
         picture_url: url,
@@ -100,7 +100,12 @@ export default class Post extends Component {
             onChange={this.handleFileChange}
             ref={this.fileInput}
           />
-          {image && <img src={window.URL.createObjectURL(image)} />}
+          {image && (
+            <img
+              className="imageForm"
+              src={window.URL.createObjectURL(image)}
+            />
+          )}
           <input type="submit" value="Publier" />
         </form>
         <nav className="nav_menu">
