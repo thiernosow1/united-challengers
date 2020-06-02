@@ -62,14 +62,5 @@ export default class Login extends Component{
 }
 
 
-export class LoginForm extends Component{
-    render(){
-    return (
-        <div>
-       <p> page du login form </p>
-       </div>
-    );
 
-}
-}
 

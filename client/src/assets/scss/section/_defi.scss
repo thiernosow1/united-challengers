@@ -1,7 +1,23 @@
+.sousmenu{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1rem;
+    font-family: $font;
+    margin-bottom: 1rem;
+
+    a{
+        color: $grey;
+
+        &:hover{
+            color:$black;
+        }
+    }
+}
 
 
 .defi{
-    height: 17vh;
+    padding: 1rem 0;
     width: 94vw;
     border-radius: 0.5rem;
     font-family: $font;
