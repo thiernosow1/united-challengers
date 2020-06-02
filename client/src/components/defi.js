@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import '../assets/css/app.css';
 import firebase from 'firebase';
 import  {db,auth,storage} from "../firebase/config";
+import Color from "../assets/js/dev/classes/color"
 
 
 

@@ -73,7 +73,7 @@ form{
          border-right: none;
         border-bottom: solid 1px $black;
 
-        placeholder{
+        ::placeholder{
            color:$black;
            font-size: 1.2rem; 
         }
