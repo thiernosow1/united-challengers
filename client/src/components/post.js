@@ -3,8 +3,12 @@ import { Link, Redirect } from "react-router-dom";
 import "../assets/css/app.css";
 import firebase from "firebase";
 import { db, auth, storage } from "../firebase/config";
+import $ from "jquery";
 
 export default class Post extends Component {
+
+ 
+
   constructor(props) {
     super(props);
     this.fileInput = React.createRef();
@@ -56,6 +60,7 @@ export default class Post extends Component {
     this.setState({ type });
   };
 
+
   render() {
     const { posts, image, redirect } = this.state;
     return redirect ? (
@@ -80,11 +85,30 @@ export default class Post extends Component {
         </div>
 
         <div className="en-tete">
-          <h2>Partagez</h2>
+          <h2>Publiez</h2>
         </div>
 
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="type-challenge">Type de défi:</label>
+<div class="main-page">
+        <form onSubmit={this.handleSubmit} class="post_form">
+         
+          <input 
+          
+            type="file"
+            onChange={this.handleFileChange}
+            ref={this.fileInput}
+          />
+         <div class="publish"></div>
+          {image && (
+            <div class="container">
+            <img
+              className="imageForm"
+              src={window.URL.createObjectURL(image)}
+            />
+            </div>
+          )}
+
+<div class="select_defi">
+          <label htmlFor="type-challenge">Défi</label>
           <select
             name="types"
             id="type-challenge"
@@ -92,22 +116,14 @@ export default class Post extends Component {
             ref={this.typeSelect}
           >
             <option value="">--Choisissez un type--</option>
-            <option value="DESSIN">Déssin</option>
+            <option value="DESSIN">Dessin</option>
             <option value="PHOTO">Photo</option>
           </select>
-          <input
-            type="file"
-            onChange={this.handleFileChange}
-            ref={this.fileInput}
-          />
-          {image && (
-            <img
-              className="imageForm"
-              src={window.URL.createObjectURL(image)}
-            />
-          )}
-          <input type="submit" value="Publier" />
+          </div>
+          <input type="submit" value="Publier" class="btn-form"/>
+          
         </form>
+        </div>
         <nav className="nav_menu">
           <Link to="/home">
             <div className="img1"></div>

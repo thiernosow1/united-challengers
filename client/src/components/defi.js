@@ -4,6 +4,7 @@ import '../assets/css/app.css';
 import firebase from 'firebase';
 import  {db,auth,storage} from "../firebase/config";
 import Color from "../assets/js/dev/classes/color";
+import $ from "jquery";
 
 export default class Defi extends Component {
   state = {
@@ -67,8 +68,15 @@ export default class Defi extends Component {
       const time = -challenge.duration + (Date.now() - challenge.created_at);
       const date = new Date(time); // temps écoulé
       console.log(time);
+
+      var colors = ['#00CCFF', '#3366CC', '#2BD4FF', '#79E4FF', '#40C2E3' ];
+      console.log("trouve la ", colors);
+      var random_color = colors[Math.floor(Math.random() * colors.length)];
+      let st = {backgroundColor : random_color}
+      
+
       return (
-        <div className="defi" key={challenge.id}>
+        <div class="defi" style={st} key={challenge.id}>
           <h4>{challenge.description}</h4>
           <p>
             {challenge.type} -{" "}
@@ -79,6 +87,8 @@ export default class Defi extends Component {
             <p>{date.toLocaleTimeString()} écoulé</p>
           </div>
         </div>
+
+        
       );
     });
   }
@@ -170,6 +180,9 @@ export default class Defi extends Component {
 
         <div class="main-page">{this.manageContent()}</div>
 
+
+       <script src="../assets/js/dev/classes/color.js"></script>
+
         <nav class="nav_menu">
           <Link to="/home">
             <div class="img1"></div>
@@ -184,6 +197,9 @@ export default class Defi extends Component {
             <div class="img4_b"></div>
           </Link>
         </nav>
+      
+
+      
       </div>
     );
   }

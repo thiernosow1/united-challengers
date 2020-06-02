@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/app.css";
+
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase";
 import firebaseConfig from "../firebase/config";
 import { db, auth, storage } from "../firebase/config";
 import Post from "./post";
 
+
+
 export default class Home extends Component {
+
+
+
   state = {
     isSignedIn: true,
     posts: [],
@@ -161,9 +167,35 @@ export default class Home extends Component {
           </Link>
         </div>
 
+
         <div className="en-tete">
           <h2>Découvrir</h2>
         </div>
+    
+        <div class="CSSgal" id="CSSGale">
+    
+      <s id="s1"></s> 
+      <s id="s2"></s>
+      <s id="s3"></s>
+    
+     
+      <div class="slider" id="slider">
+   
+        <div class="slide">
+            1
+        </div>
+  
+        <div class="slide" >
+            2
+        </div>
+  
+        <div class="slide">
+            3
+       </div>
+
+</div>
+       </div>
+
 
         {posts.length == 0 ? (
           <p> Aucune publication </p>
@@ -172,6 +204,7 @@ export default class Home extends Component {
           {this.displayPosts(posts)}
           </div>
         )}
+
 
         <nav className="nav_menu">
           <Link to="/home">

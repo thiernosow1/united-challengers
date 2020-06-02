@@ -1,0 +1,70 @@
+.post_form{
+    width: 100vw;
+    height:80vh;
+    background-color: $lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+    .publish{
+        background-color: $white;
+        width: 90vw;
+        height: 60vh;
+        border: none;
+        background-image: url("/prod/upload.svg");
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+   
+    
+
+    }
+    input{
+        border: none;
+        margin: 0 auto;
+        color: $white;
+        background-color: $white;
+        text-decoration: none;
+        opacity: 0.1;
+        background-color: $white;
+        width: 90vw;
+        height: 60vh;
+        overflow: hidden;
+        position: absolute;
+        z-index: 2;
+    }
+
+    input[type=file]{
+        background-color: $white;
+    }
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 90vw;
+        height: 60vh;
+        position: absolute;
+        text-align: center;
+        object-fit: cover;
+    .imageForm{
+        width: 100%;
+
+    }
+}
+.btn-form{
+    background-color: $lightblue;
+    border-radius: 0.7rem;
+    color:$white;
+    padding: 0.8rem 7rem;
+    font-size: 1.5rem;
+    text-decoration-line: none;
+    border: none;
+    box-shadow: none;
+}
+
+}
