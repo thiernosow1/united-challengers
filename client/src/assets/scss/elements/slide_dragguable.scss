@@ -1,123 +1,123 @@
 
 
-.slider__body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+// .slider__body {
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//   }
   
-  .slider__container {
-    position: fixed;
-    display: block;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 500ms ease-in-out;
-    transition: -webkit-transform 500ms ease-in-out;
-    -o-transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out;
-  }
+//   .slider__container {
+//     position: fixed;
+//     display: block;
+//     height: 100%;
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//     -webkit-transition: -webkit-transform 500ms ease-in-out;
+//     transition: -webkit-transform 500ms ease-in-out;
+//     -o-transition: transform 500ms ease-in-out;
+//     transition: transform 500ms ease-in-out;
+//   }
   
-  .slider__page {
-    position: relative;
-    width: 100vw;
-    height: 50vh;
+//   .slider__page {
+//     position: relative;
+//     width: 100vw;
+//     height: 50vh;
    
-  }
-  .switch{
-    text-decoration-line: none;
-  }
-  .slider__indicators {
-    position: fixed;
-    left: 18px;
-    top: 50%;
-    z-index: 2;
-    margin: 0;
-    padding: 0;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  .slider__indicator {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 10px 0;
-    border-radius: 100px;
-    cursor: default;
-  }
-  .slider__indicator--active {
-    opacity: 0.3;
-  }
+//   }
+//   .switch{
+//     text-decoration-line: none;
+//   }
+//   .slider__indicators {
+//     position: fixed;
+//     left: 18px;
+//     top: 50%;
+//     z-index: 2;
+//     margin: 0;
+//     padding: 0;
+//     -webkit-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     transform: translateY(-50%);
+//   }
+//   .slider__indicator {
+//     display: block;
+//     width: 10px;
+//     height: 10px;
+//     margin: 10px 0;
+//     border-radius: 100px;
+//     cursor: default;
+//   }
+//   .slider__indicator--active {
+//     opacity: 0.3;
+//   }
 
-  .slider {
-    width:90vw;
-    height: 10vh;
-        }
+//   .slider {
+//     width:90vw;
+//     height: 10vh;
+//         }
          
-        .wrapper {
-          overflow: hidden;
-          position: relative;
-          background: #222;
-          z-index: 1;
-        }
+//         .wrapper {
+//           overflow: hidden;
+//           position: relative;
+//           background: #222;
+//           z-index: 1;
+//         }
          
-        #items {
-          width: 10000px;
-          position: relative;
-          top: 0;
-          left: -300px;
-        }
+//         #items {
+//           width: 10000px;
+//           position: relative;
+//           top: 0;
+//           left: -300px;
+//         }
          
-        #items.shifting {
-          transition: left .2s ease-out;
-        }
+//         #items.shifting {
+//           transition: left .2s ease-out;
+//         }
          
-        .slide {
-          width: 90vw;
-          height: 15vh;
-          cursor: pointer;
-          float: left;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          transition: all 1s;
-          position: relative;
-          background: #FFCF47;
-        }
+//         .slide {
+//           width: 90vw;
+//           height: 15vh;
+//           cursor: pointer;
+//           float: left;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: center;
+//           transition: all 1s;
+//           position: relative;
+//           background: #FFCF47;
+//         }
         
-        .control {
-            position: absolute;
-            top:90%;
-            width: 2rem;
-            height: 2rem;
-            background: #fff;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-            text-align: center;
-          padding-bottom: 0.8rem;
+//         .control {
+//             position: absolute;
+//             top:90%;
+//             width: 2rem;
+//             height: 2rem;
+//             background: #fff;
+//             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+//             z-index: 2;
+//             text-align: center;
+//           padding-bottom: 0.8rem;
     
-          }
+//           }
     
           
-          .prev,
-          .next {
-            cursor: pointer;
-            font-size: 2rem;
-          }
+//           .prev,
+//           .next {
+//             cursor: pointer;
+//             font-size: 2rem;
+//           }
           
-          .prev {
-            left: 8.5vw;
-          }
+//           .prev {
+//             left: 8.5vw;
+//           }
           
-          .next {
-            right: 8.5vw;
-          }
+//           .next {
+//             right: 8.5vw;
+//           }
           
-          .prev:active,
-          .next:active {
-            transform: scale(0.8);
-          }
+//           .prev:active,
+//           .next:active {
+//             transform: scale(0.8);
+//           }

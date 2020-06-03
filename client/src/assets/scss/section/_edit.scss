@@ -15,13 +15,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    margin: 0 auto;
+    width: 80vw;
+    margin-left: 10vw;
     height:10vh;
 
     div{
 
-        width: 70vw;
+        width: 80vw;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -30,7 +30,7 @@
         justify-content:center;
 
     h4{
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: $font_bold; 
     margin:0 1rem;
     width: 70vh;
@@ -38,11 +38,7 @@
 
     }
 
-    .id_user{
-        font-size: 0.7rem;
-        color:$grey;
-        margin-left: 5vw;
-    }
+
 }
 
 img{
@@ -55,10 +51,10 @@ img{
 }
 
 form{
-    border: solid 1Px red;
+
     margin-top: 20vh;    
     display: flex;
-    margin-left: 5vw;
+    margin-left: 10vw;
     width: 80vw;
     flex-direction: column;
 
@@ -72,6 +68,7 @@ form{
         border-left:none;
          border-right: none;
         border-bottom: solid 1px $black;
+        line-height: 2rem;
 
         ::placeholder{
            color:$black;

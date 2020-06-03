@@ -92,7 +92,7 @@ export default class Post extends Component {
         <form onSubmit={this.handleSubmit} class="post_form">
          
           <input 
-          
+            class="input-file"
             type="file"
             onChange={this.handleFileChange}
             ref={this.fileInput}

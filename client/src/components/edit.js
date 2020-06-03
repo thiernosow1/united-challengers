@@ -39,9 +39,7 @@ export default class Edit extends Component {
                 />
                 <div>
                   <h4>{firebase.auth().currentUser.displayName}</h4>
-                  <span class="id_user">
-                    @11_{firebase.auth().currentUser.displayMail}
-                  </span>
+                  
                 </div>
               </div>
 
